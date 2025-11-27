@@ -1,3 +1,6 @@
+This repo contains my “Piggy Bank Variables” widget page for the Hello World Curriculum application.
+Open assets/src/html/widget.html in a browser (via local server) to try it.
+
 # HTML Widget Page
 
 ## What To Do
