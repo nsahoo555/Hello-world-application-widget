@@ -5,7 +5,7 @@
   <!-- Metadata -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Page Title</title>
+  <title>Learning Variables using Piggy Banks</title>
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,16 +15,130 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="../css/widget-page.css">
+  <link rel="stylesheet" href="../css/piggy-bank-widget.css">
 </head>
 
-<body>
+<body id="widget-page-piggy-bank">
+
+  <div class="column column-md">
+
+    <!-- SECTION 1: What is a variable? -->
+    <section>
+      <div class="text">
+        <h1>What Is a Variable?</h1>
+        <p>
+          Imagine you have a piggy bank. You can put coins inside it, take coins out,
+          or add more whenever you want.
+        </p>
+        <p>
+          A <strong>variable</strong> in programming works the same way.
+          It is a place where we store a value, just like a piggy bank stores coins!
+        </p>
+      </div>
+
+      <button class="button-semantic button-primary button-continue">
+        <span class="button-text">Continue</span>
+        <svg class="button-icon" width="16" height="16" viewBox="0 0 16 16" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <path d="M16 8L14.59 6.59L9 12.17V0H7V12.17L1.42 6.58L0 8L8 16L16 8Z" fill="white" />
+        </svg>
+      </button>
+    </section>
+
+    <!-- SECTION 2: How variables change -->
+    <section>
+      <div class="text">
+        <h2>Changing What’s Inside</h2>
+        <p>
+          Let’s say your piggy bank starts with <strong>0 coins</strong>.
+        </p>
+        <p>
+          You decide to put <strong>5 coins</strong> inside. Now the value is <strong>5</strong>.
+          Later, you add <strong>1 more coin</strong>, and the value becomes <strong>6</strong>.
+        </p>
+        <p>
+          Obeserve how the number can change.
+          That’s what programmers do with variables! They can update their value any time.
+        </p>
+      </div>
+
+      <button class="button-semantic button-primary button-continue">
+        <span class="button-text">Continue</span>
+        <svg class="button-icon" width="16" height="16" viewBox="0 0 16 16" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <path d="M16 8L14.59 6.59L9 12.17V0H7V12.17L1.42 6.58L0 8L8 16L16 8Z" fill="white" />
+        </svg>
+      </button>
+    </section>
+
+    <!-- SECTION 3: Interactive piggy bank widget -->
+    <section>
+      <div class="text">
+        <h2>Try It Yourself!</h2>
+        <p>Now you get to use your own piggy bank.</p>
+        <p>You can:</p>
+        <ul>
+          <li><strong>Set</strong> how many coins it holds</li>
+          <li><strong>Add</strong> one more coin</li>
+          <li><strong>Empty</strong> it out</li>
+        </ul>
+        <p>
+          Try clicking the buttons to change the number inside your piggy bank.
+          Watch how the value updates each time, exactly how a variable works!
+        </p>
+      </div>
+
+      <!-- PIGGY BANK WIDGET -->
+      <div class="widget piggy-bank-widget">
+        <div class="piggy-bank-display">
+          <h3>Your Piggy Bank</h3>
+          <p class="piggy-bank-value">Coins: 0</p>
+          <p class="piggy-bank-message">Start by setting a number of coins.</p>
+        </div>
+
+        <div class="piggy-bank-controls">
+          <label for="coin-input">Type a number of coins:</label>
+          <input
+            id="coin-input"
+            class="piggy-bank-input"
+            type="number"
+            min="0"
+            step="1"
+          />
+
+          <div class="piggy-bank-buttons">
+            <button class="button-semantic button-primary piggy-set">Set Coins</button>
+            <button class="button-semantic button-secondary piggy-add">+1 Coin</button>
+            <button class="button-semantic button-tertiary piggy-reset">Empty Bank</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: Wrap-up -->
+    <section>
+      <div class="text">
+        <h2>You Used a Variable!</h2>
+        <p>
+          Awesome job! You set a value, changed it, and reset it.
+        </p>
+        <p>
+          A variable is simply a place that <strong>stores a value</strong>.
+          And now you know how to change it!
+        </p>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- JS imports and widget registration -->
   <script type="module">
     import { WidgetPage } from "../js/WidgetPage.js";
+    import { PiggyBankWidget } from "../js/PiggyBankWidget.js";
 
     document.addEventListener("DOMContentLoaded", () => {
-      const widgetPage = new WidgetPage("widget-page-template", document.body);
+      const widgetPage = new WidgetPage("widget-page-piggy-bank", document.body);
+      widgetPage.registerWidget(".piggy-bank-widget", PiggyBankWidget);
     });
   </script>
-</body>
-
 </html>

@@ -1,0 +1,87 @@
+/* assets/src/css/piggy-bank-widget.css */
+
+.piggy-bank-widget {
+  max-width: 28rem;
+  margin: 1.5em auto 0;
+  padding: 1.2em 1.4em;
+  border-radius: 0.9em;
+  border: 0.16em solid var(--neutral-80);
+  background: #fde8f0;
+  border-color: #f5b8ce;
+  box-shadow: 0 0.4em 0.9em rgba(0, 0, 0, 0.06);
+}
+
+/* cute header area with pig icon */
+.piggy-bank-display {
+  text-align: center;
+  margin-bottom: 1em;
+  padding-bottom: 0.8em;
+  border-bottom: 0.1em solid var(--neutral-80);
+  position: relative;
+}
+
+.piggy-bank-display::before {
+  content: "🐷";
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6em;
+  margin-bottom: 0.25em;
+}
+
+.piggy-bank-display h3 {
+  margin: 0.2em 0 0.1em;
+}
+
+.piggy-bank-value {
+  font-size: 1.3em;
+  font-weight: bold;
+  color: var(--primary-100);
+  margin: 0.1em 0;
+}
+
+.piggy-bank-message {
+  margin-top: 0.3em;
+  font-size: 0.95em;
+  color: var(--neutral-70);
+}
+
+/* controls block */
+.piggy-bank-controls {
+  margin-top: 0.8em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6em;
+}
+
+.piggy-bank-controls label {
+  font-size: 0.95em;
+}
+
+.piggy-bank-input {
+  padding: 0.6em 0.8em;
+  border-radius: 0.5em;
+  border: 0.15em solid #f3c76b;
+  background: #fff5cc;
+  transition: all 0.15s ease;
+}
+
+.piggy-bank-input:focus {
+  outline: none;
+  border-color: #e2b347;
+  background: #ffefad;
+  box-shadow: 0 0 0.35em rgba(226, 179, 71, 0.45);
+}
+
+/* buttons row */
+.piggy-bank-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4em;
+  margin-top: 0.4em;
+}
+
+.piggy-bank-buttons button {
+  flex: 1;
+  min-width: 6rem;
+}
